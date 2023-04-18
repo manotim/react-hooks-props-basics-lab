@@ -1,14 +1,18 @@
-import React from "react";
+import React from 'react'
 
-function About() {
+import Links from './Links'
+import user from '../data/user'
+
+function About(props) {
   return (
-    <div id="about">
+    <div id='about'>
       <h2>About Me</h2>
-      <p>Put the bio in here</p>
-      <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
+      {props.bio && <p>{props.bio}</p>}
+      <img src='https://i.imgur.com/mV8PQxj.gif' alt='I made this' />
       {/* add your <Links /> component here */}
+      <Links links={user.links} />
     </div>
-  );
+  )
 }
 
-export default About;
+export default About
